@@ -1,0 +1,802 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="description" content="Découvrez Naît Sens, votre partenaire pour l'accompagnement périnatal et parental. Apprenez-en plus sur notre histoire, nos valeurs et notre engagement envers les familles." />
+  <meta name="keywords" content="accompagnement périnatal, parentalité, naissance, bien-être, Naît Sens" />
+  <meta name="author" content="Naît Sens" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Naît Sens - À Propos</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet" />
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-5QBB823G');</script>
+  <!-- End Google Tag Manager -->
+
+  <link rel="icon" type="image/png" href="./Images/Naît Sens.png">
+
+  <style>
+    :root {
+      --primary-color: #f5e5e8;
+      --secondary-color: #e6d0d4;
+      --accent-color: #d4a5af;
+      --text-color: #4a4a4a;
+      --background-color: #faf7f7;
+      --footer-bg-color: #f1d0b5;
+      --footer-text-color: #4a4a4a;
+      --footer-separator-color: #d4a5af;
+      --scroll-top-bg-color: #d4a5af;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body,
+    html {
+      font-family: "Roboto", sans-serif;
+      color: var(--text-color);
+      line-height: 1.8;
+      background-color: var(--background-color);
+      scroll-behavior: smooth;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    header {
+      background: var(--primary-color);
+      padding: 10px 0;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      position: fixed;
+      width: 100%;
+      z-index: 1000;
+      transition: all 0.4s ease;
+    }
+
+    header.scrolled {
+      padding: 5px 0;
+      background: rgba(245, 229, 232, 0.9);
+      backdrop-filter: blur(10px);
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo-container {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+    }
+
+    .logo-image {
+      width: 60px;
+      height: 60px;
+      margin-right: 10px;
+    }
+
+    .logo {
+      font-family: "Playfair Display", serif;
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--text-color);
+      transition: all 0.3s ease;
+      text-decoration: none;
+    }
+
+    .logo:hover {
+      color: var(--accent-color);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+    }
+
+    .nav-links a {
+      color: var(--text-color);
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 0.9rem;
+      transition: all 0.3s ease;
+      position: relative;
+    }
+
+    .nav-links a::after {
+      content: "";
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: -3px;
+      left: 0;
+      background-color: var(--accent-color);
+      transition: width 0.3s ease;
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    .social-icon {
+      font-size: 1.5rem;
+      color: var(--text-color);
+      transition: all 0.3s ease;
+      vertical-align: middle;
+    }
+
+    .social-icon:hover {
+      color: var(--accent-color);
+    }
+
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: var(--primary-color);
+      min-width: 200px;
+      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+      z-index: 1;
+      top: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      padding: 8px 0;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .dropdown-content a {
+      color: var(--text-color);
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      text-align: center;
+      transition: background-color 0.3s ease;
+    }
+
+    .dropdown-content a:hover {
+      background-color: var(--secondary-color);
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+      opacity: 1;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(-10px) translateX(-50%);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0) translateX(-50%);
+      }
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+      animation: fadeIn 0.3s ease forwards;
+    }
+
+    .about-hero {
+      background-color: var(--footer-bg-color);
+      min-height: 25vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      padding-top: 80px;
+    }
+
+    .about-hero-content {
+      max-width: 800px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+    }
+
+    .about-hero h1 {
+      font-family: "Playfair Display", serif;
+      font-size: 3rem;
+      color: var(--text-color);
+      animation: fadeInDown 1s ease;
+    }
+
+    @keyframes fadeInDown {
+      from {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .about-hero p {
+      font-size: 1.2rem;
+      color: var(--text-color);
+      margin-top: 20px;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+      line-height: 1.6;
+      animation: fadeInUp 1s ease;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .about-section {
+      padding: 80px 0;
+    }
+
+    .about-content {
+      display: flex;
+      align-items: center;
+      gap: 60px;
+      flex-wrap: wrap;
+    }
+
+    .about-image {
+      flex: 1;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      max-width: 500px;
+      margin: 0 auto;
+      animation: fadeInLeft 1s ease;
+    }
+
+    .about-image img {
+      width: 100%;
+      height: auto;
+      display: block;
+      transition: transform 0.3s ease;
+    }
+
+    .about-image:hover img {
+      transform: scale(1.05);
+    }
+
+    @keyframes fadeInLeft {
+      from {
+        opacity: 0;
+        transform: translateX(-20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    .about-text {
+      flex: 1;
+      max-width: 600px;
+      margin: 0 auto;
+      animation: fadeInRight 1s ease;
+    }
+
+    @keyframes fadeInRight {
+      from {
+        opacity: 0;
+        transform: translateX(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    .about-text h2 {
+      font-family: "Playfair Display", serif;
+      font-size: 2.5rem;
+      color: var(--accent-color);
+      margin-bottom: 20px;
+    }
+
+    .about-text p {
+      margin-bottom: 20px;
+      font-size: 1.1rem;
+      line-height: 1.8;
+    }
+
+    .values-section {
+      background: var(--secondary-color);
+      padding: 80px 0;
+    }
+
+    .values-grid {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+
+    .value-card {
+      background: #fff;
+      border-radius: 15px;
+      padding: 30px;
+      text-align: center;
+      transition: all 0.3s ease;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      max-width: 250px;
+      flex: 1 1 250px;
+      opacity: 0;
+      transform: translateY(20px);
+    }
+
+    .value-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    }
+
+    .value-card.show {
+      opacity: 1;
+      transform: translateY(0);
+      transition: all 0.6s ease-out;
+    }
+
+    .value-icon {
+      margin-bottom: 20px;
+    }
+
+    .value-icon img {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+
+    .value-card h3 {
+      font-family: "Playfair Display", serif;
+      font-size: 1.5rem;
+      color: var(--accent-color);
+      margin-bottom: 15px;
+    }
+
+    .value-card p {
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+
+    .formation-section {
+      padding: 80px 0;
+      background-color: var(--background-color);
+    }
+
+    .formation-section h2 {
+      text-align: center;
+      margin-bottom: 40px;
+      font-family: "Playfair Display", serif;
+      font-size: 2.5rem;
+      color: var(--accent-color);
+    }
+
+    .formation-section ul {
+      list-style-type: none;
+      padding-left: 0;
+      font-size: 1.1rem;
+      line-height: 1.8;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .formation-section ul li {
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+    }
+
+    .formation-section ul li i {
+      margin-right: 10px;
+      color: var(--accent-color);
+    }
+
+    footer {
+      background: var(--footer-bg-color);
+      color: var(--footer-text-color);
+      text-align: center;
+      padding: 20px 0;
+      position: relative;
+    }
+
+    .footer-separator {
+      height: 1px;
+      background-color: var(--footer-separator-color);
+      margin: 20px 0;
+    }
+
+    .footer-quote {
+      font-family: "Playfair Display", serif;
+      font-size: 1.5rem;
+      font-style: italic;
+      max-width: 800px;
+      margin: 0 auto;
+      line-height: 1.6;
+      color: var(--footer-text-color);
+    }
+
+    .footer-author {
+      font-size: 1rem;
+      margin-top: 20px;
+      font-weight: 700;
+      color: var(--footer-text-color);
+    }
+
+    .footer-links {
+      margin-top: 30px;
+    }
+
+    .footer-links a {
+      color: var(--footer-text-color);
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    .footer-links a:hover {
+      color: var(--accent-color);
+    }
+
+    .footer-copyright {
+      margin-top: 20px;
+      font-size: 0.9rem;
+      color: var(--footer-text-color);
+    }
+
+    .footer-info {
+      margin-top: 10px;
+      font-size: 0.9rem;
+      color: var(--footer-text-color);
+      font-weight: 500;
+    }
+
+    .scroll-to-top {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background-color: var(--scroll-top-bg-color);
+      color: white;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 24px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      z-index: 1000;
+    }
+
+    .scroll-to-top:hover {
+      background-color: #b98490;
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+      }
+
+      .about-hero h1 {
+        font-size: 2.8rem;
+      }
+
+      .about-hero p {
+        font-size: 1.1rem;
+      }
+
+      .about-content {
+        flex-direction: column;
+      }
+
+      .about-image,
+      .about-text {
+        flex: none;
+        width: 100%;
+      }
+
+      .footer-quote {
+        font-size: 1.2rem;
+      }
+
+      .footer-links a {
+        display: block;
+        margin: 10px 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-5QBB823G');</script>
+  <!-- End Google Tag Manager -->
+
+  <header>
+    <nav class="container">
+      <a href="accueil.html" class="logo-container" aria-label="Retour à l'accueil">
+        <img
+          src="./Images/Naitnait.png"
+          alt="Logo Naît Sens"
+          class="logo-image"
+          width="60"
+          height="60"
+          loading="lazy"
+        />
+        <span class="logo">Naît Sens</span>
+      </a>
+      <div class="nav-links">
+        <a href="accueil.html" aria-label="Retour à l'accueil">Accueil</a>
+        <a href="a-propos.html" aria-label="En savoir plus sur Naît Sens">Présentation</a>
+        <div class="dropdown">
+          <a href="services2.html" class="dropbtn" aria-label="Voir les services">Prestations</a>
+          <div class="dropdown-content">
+            <a href="consultation.html#consultations">Consultations périnatales et parentales</a>
+            <a href="presence.html#accompagnement">Présence à l'accouchement</a>
+            <a href="forfaits.html#accouchement">Forfaits Accompagnement</a>
+            <a href="ateliersbebe.html#accouchement">Ateliers Bébé signes</a>
+            <a href="massage.html#accouchement">Massage bébé (0 à 18 mois)</a>
+            <a href="atelierportage.html#accouchement">Atelier portage physiologique</a>
+          </div>
+        </div>
+        <a href="/Tarifs/tarifs.html" aria-label="Voir les tarifs">Tarifs</a>
+        <a href="bon-cadeau.html" aria-label="Cadeau">Bon cadeau</a>
+        <a href="contact.html" aria-label="Contactez-nous">Contact</a>
+        <a
+          href="https://www.instagram.com/nait.sens_/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Suivez-nous sur Instagram"
+        >
+          <i class="fab fa-instagram social-icon"></i>
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="about-hero" id="apropos">
+      <div class="container">
+        <div class="about-hero-content">
+          <h1>À Propos de Naît Sens</h1>
+          <p>
+            Découvrez ma passion pour l'accompagnement périnatal et parental,
+            et mon engagement à soutenir les familles dans leur parcours
+            unique.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="about-section">
+      <div class="container">
+        <div class="about-content">
+          <div class="about-image">
+            <img
+              src="./images/julie.jpg"
+              alt="Fondatrice de Naît Sens, souriant avec bienveillance"
+              width="500"
+              height="500"
+              loading="lazy"
+            />
+          </div>
+          <div class="about-text">
+            <h2>Mon Histoire</h2>
+            <p>
+              Dans une société qui bouge, avec une génération de parents qui
+              se questionnent, qui remet de plus en plus en cause notre
+              système éducatif classique, on peut se sentir perdu !
+            </p>
+            <p>
+              Une accompagnante à la parentalité est une personne qui va
+              soutenir vos choix en tant que parents. Elle va écouter,
+              orienter et accueillir avec bienveillance.
+            </p>
+            <p>
+              Il est crucial de savoir écouter sans juger, de créer un espace
+              de confiance où les parents peuvent s'exprimer librement. Cette
+              capacité à accompagner en pleine présence et à écouter
+              activement est le fondement de tout accompagnement.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="values-section">
+      <div class="container">
+        <h2>Mes Valeurs</h2>
+        <div class="values-grid">
+          <div class="value-card">
+            <div class="value-icon">
+              <img
+                src="./images/empatie1.jpg"
+                alt="Empathie et douceur"
+                loading="lazy"
+              />
+            </div>
+            <h3>Empathie et douceur</h3>
+            <p>
+              Je vous offre une écoute attentive et un soutien chaleureux.
+            </p>
+          </div>
+          <div class="value-card">
+            <div class="value-icon">
+              <img
+                src="./images/respect.jpg"
+                alt="Bienveillance et respect"
+                loading="lazy"
+              />
+            </div>
+            <h3>Bienveillance et respect</h3>
+            <p>
+              Je respecte vos choix et vos valeurs en toutes circonstances.
+            </p>
+          </div>
+          <div class="value-card">
+            <div class="value-icon">
+              <img
+                src="./images/expertise.jpg"
+                alt="Écoute et patience"
+                loading="lazy"
+              />
+            </div>
+            <h3>Écoute et patience</h3>
+            <p>Je prends le temps de comprendre vos besoins spécifiques.</p>
+          </div>
+          <div class="value-card">
+            <div class="value-icon">
+              <img
+                src="./images/epanouissement.jpg"
+                alt="Confiance et discrétion"
+                loading="lazy"
+              />
+            </div>
+            <h3>Confiance et discrétion</h3>
+            <p>Votre intimité est précieuse; je veille à la protéger.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="formation-section">
+      <div class="container">
+        <h2>Mes Formations</h2>
+        <ul>
+          <li>
+            <i class="fas fa-graduation-cap"></i> Infirmière diplômée d'État
+          </li>
+          <li>
+            <i class="fas fa-graduation-cap"></i> AFGSU niveau 2 : Attestation
+            de Formation aux Gestes et Soins d'Urgence
+          </li>
+          <li>
+            <i class="fas fa-first-aid"></i> PSC1 : Prévention et Secours
+            Civiques de niveau 1
+          </li>
+          <li>
+            <i class="fas fa-child"></i> Accompagnante en périnatalité et
+            parentalité chez LBDC
+          </li>
+          <li><i class="fas fa-child"></i> Monitrice de portage chez LBDC</li>
+          <li>
+            <i class="fas fa-baby"></i> Massage bébé et bambin chez LBDC
+          </li>
+          <li>
+            <i class="fas fa-spa"></i> Soin rebozo avec resserrage de bassin
+            chez LBDC
+          </li>
+          <li>
+            <i class="fas fa-user-md"></i> Animatrice de communication
+            gestuelle adaptée à la parole chez LBDC
+          </li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-quote">
+        "Accompagner quelqu'un ce n'est pas le précéder, lui indiquer la
+        route, lui imposer un itinéraire, ni même connaître la direction qu'il
+        va prendre. C'est marcher à ses côtés en le laissant libre de choisir
+        son chemin et le rythme de son pas."
+      </div>
+      <div class="footer-author">- Patrick Vespierre</div>
+      <div class="footer-separator"></div>
+      <div class="footer-links">
+        <a href="accueil.html">Accueil</a>
+        <a href="contact.html">Contact</a>
+        <a href="condition.html">Mentions légales</a>
+      </div>
+      <div class="footer-copyright">&copy; 2024 - Naît Sens</div>
+      <div class="footer-info">
+        Accompagnement périnatal et parental à domicile
+      </div>
+    </div>
+  </footer>
+
+  <div
+    class="scroll-to-top"
+    onclick="window.scrollTo({ top: 0, behavior: 'smooth' });"
+  >
+    <i class="fas fa-arrow-up"></i>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const header = document.querySelector("header");
+
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 50) {
+          header.classList.add("scrolled");
+        } else {
+          header.classList.remove("scrolled");
+        }
+
+        const scrollToTop = document.querySelector(".scroll-to-top");
+        if (window.scrollY > 300) {
+          scrollToTop.classList.add("show");
+        } else {
+          scrollToTop.classList.remove("show");
+        }
+      });
+
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("show");
+            }
+          });
+        },
+        {
+          threshold: 0.1,
+        }
+      );
+
+      document.querySelectorAll(".value-card").forEach((card, index) => {
+        observer.observe(card);
+        card.style.transitionDelay = `${index * 0.1}s`;
+      });
+    });
+  </script>
+</body>
+</html>

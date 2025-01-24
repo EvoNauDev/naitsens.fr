@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contactez Naît Sens pour des services d'accompagnement périnatal et parental personnalisés." />
+  <meta name="keywords" content="accompagnement périnatal, parentalité, naissance, bien-être, Naît Sens, contact" />
+  <meta name="author" content="Naît Sens" />
+  <title>Contact - Naît Sens | Accompagnement Périnatal et Parental</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-5QBB823G');</script>
+  <!-- End Google Tag Manager -->
+
+  <link rel="icon" type="image/png" href="./Images/Naît Sens.png">
+  
+  <style>
+    :root {
+      --primary-color: #f5e5e8;
+      --secondary-color: #e6d0d4;
+      --accent-color: #d4a5af;
+      --text-color: #4a4a4a;
+      --background-color: #faf7f7;
+      --footer-bg-color: #f1d0b5;
+      --footer-text-color: #4a4a4a;
+      --footer-separator-color: #d4a5af;
+      --scroll-top-bg-color: #d4a5af;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body,
+    html {
+      font-family: "Roboto", sans-serif;
+      color: var(--text-color);
+      line-height: 1.8;
+      background-color: var(--background-color);
+      scroll-behavior: smooth;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    header {
+      background: var(--primary-color);
+      padding: 10px 0;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      position: fixed;
+      width: 100%;
+      z-index: 1000;
+      transition: all 0.4s ease;
+    }
+
+    header.scrolled {
+      padding: 5px 0;
+      background: rgba(245, 229, 232, 0.9);
+      backdrop-filter: blur(10px);
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo-container {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+    }
+
+    .logo-image {
+      width: 60px;
+      height: 60px;
+      margin-right: 10px;
+    }
+
+    .logo {
+      font-family: "Playfair Display", serif;
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--text-color);
+      transition: all 0.3s ease;
+      text-decoration: none;
+    }
+
+    .logo:hover {
+      color: var(--accent-color);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+    }
+
+    .nav-links a {
+      color: var(--text-color);
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 0.9rem;
+      transition: all 0.3s ease;
+      position: relative;
+    }
+
+    .nav-links a::after {
+      content: "";
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: -3px;
+      left: 0;
+      background-color: var(--accent-color);
+      transition: width 0.3s ease;
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    .social-icon {
+      font-size: 1.5rem;
+      color: var(--text-color);
+      transition: all 0.3s ease;
+      vertical-align: middle;
+    }
+
+    .social-icon:hover {
+      color: var(--accent-color);
+    }
+
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: var(--primary-color);
+      min-width: 200px;
+      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+      z-index: 1;
+      top: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      padding: 8px 0;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .dropdown-content a {
+      color: var(--text-color);
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      text-align: center;
+      transition: background-color 0.3s ease;
+    }
+
+    .dropdown-content a:hover {
+      background-color: var(--secondary-color);
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+      opacity: 1;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(-10px) translateX(-50%);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0) translateX(-50%);
+      }
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+      animation: fadeIn 0.3s ease forwards;
+    }
+
+    .contact-hero {
+      background-color: var(--footer-bg-color);
+      min-height: 25vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      padding-top: 80px; /* Adjusted padding to prevent overlap */
+    }
+
+    .contact-hero h1 {
+      font-family: "Playfair Display", serif;
+      font-size: 3rem;
+      color: var(--text-color);
+      animation: fadeInDown 1s ease;
+    }
+
+    .contact-hero p {
+      font-size: 1.2rem;
+      color: var(--text-color);
+      margin-top: 20px;
+      max-width: 600px;
+      line-height: 1.6;
+      animation: fadeInUp 1s ease;
+    }
+
+    @keyframes fadeInDown {
+      from {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .contact-section {
+      padding: 80px 0;
+    }
+
+    .contact-grid {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+
+    .contact-form {
+      background: var(--background-color);
+      border-radius: 15px;
+      padding: 40px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      max-width: 600px;
+      flex: 1 1 300px;
+      animation: fadeInLeft 1s ease;
+    }
+
+    .contact-info {
+      background: var(--background-color);
+      border-radius: 15px;
+      padding: 40px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      max-width: 600px;
+      flex: 1 1 300px;
+      text-align: center;
+      animation: fadeInRight 1s ease;
+    }
+
+    @keyframes fadeInLeft {
+      from {
+        opacity: 0;
+        transform: translateX(-20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    @keyframes fadeInRight {
+      from {
+        opacity: 0;
+        transform: translateX(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    .contact-form h2,
+    .contact-info h2 {
+      font-family: "Playfair Display", serif;
+      font-size: 2rem;
+      color: var(--text-color);
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+      text-align: left;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: 500;
+    }
+
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid var(--secondary-color);
+      border-radius: 5px;
+      font-family: "Roboto", sans-serif;
+      font-size: 1rem;
+      transition: border-color 0.3s ease;
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus,
+    .form-group select:focus {
+      border-color: var(--accent-color);
+      outline: none;
+    }
+
+    .form-group textarea {
+      resize: vertical;
+      min-height: 100px;
+    }
+
+    .btn-submit {
+      width: 100%;
+      padding: 15px;
+      background-color: var(--accent-color);
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      margin-top: 10px;
+    }
+
+    .btn-submit:hover {
+      background-color: #b98490;
+    }
+
+    .contact-info p {
+      margin-bottom: 15px;
+      text-align: center;
+      font-size: 1rem;
+    }
+
+    .contact-info i {
+      color: var(--accent-color);
+      margin-right: 10px;
+    }
+
+    .social-links {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin-top: 20px;
+    }
+
+    .social-links a {
+      color: var(--accent-color);
+      font-size: 1.5rem;
+      transition: all 0.3s ease;
+    }
+
+    .social-links a:hover {
+      color: var(--text-color);
+    }
+
+    .home-sessions {
+      text-align: center;
+      font-size: 1.2rem;
+      font-weight: bold;
+      margin-top: 30px;
+    }
+
+    .map-container {
+      width: 100%;
+      height: 400px;
+      margin-top: 30px;
+      border-radius: 15px;
+      overflow: hidden;
+    }
+
+    footer {
+      background: var(--footer-bg-color);
+      color: var(--footer-text-color);
+      text-align: center;
+      padding: 20px 0;
+      position: relative;
+    }
+
+    .footer-separator {
+      height: 1px;
+      background-color: var(--footer-separator-color);
+      margin: 20px 0;
+    }
+
+    .footer-quote {
+      font-family: "Playfair Display", serif;
+      font-size: 1.5rem;
+      font-style: italic;
+      max-width: 800px;
+      margin: 0 auto;
+      line-height: 1.6;
+      color: var(--footer-text-color);
+    }
+
+    .footer-author {
+      font-size: 1rem;
+      margin-top: 20px;
+      font-weight: 700;
+      color: var(--footer-text-color);
+    }
+
+    .footer-links {
+      margin-top: 20px;
+    }
+
+    .footer-links a {
+      color: var(--footer-text-color);
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    .footer-links a:hover {
+      color: var(--accent-color);
+    }
+
+    .footer-copyright {
+      margin-top: 10px;
+      font-size: 0.9rem;
+      color: var(--footer-text-color);
+    }
+
+    .footer-info {
+      margin-top: 10px;
+      font-size: 0.9rem;
+      color: var(--footer-text-color);
+      font-weight: 500;
+    }
+
+    .scroll-to-top {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background-color: var(--scroll-top-bg-color);
+      color: white;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 24px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      z-index: 1000;
+      display: none;
+    }
+
+    .scroll-to-top:hover {
+      background-color: #b98490;
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+      }
+
+      .contact-hero h1 {
+        font-size: 2.8rem;
+      }
+
+      .contact-hero p {
+        font-size: 1.1rem;
+      }
+
+      .contact-grid {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .footer-quote {
+        font-size: 1.2rem;
+      }
+
+      .footer-links a {
+        display: block;
+        margin: 10px 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="container">
+      <a href="accueil.html" class="logo-container" aria-label="Retour à l'accueil">
+        <img src="./Images/Naitnait.png" alt="Logo Naît Sens" class="logo-image" width="60" height="60" loading="lazy" />
+        <span class="logo">Naît Sens</span>
+      </a>
+      <div class="nav-links">
+        <a href="accueil.html" aria-label="Retour à l'accueil">Accueil</a>
+        <a href="a-propos.html" aria-label="En savoir plus sur Naît Sens">Présentation</a>
+        <div class="dropdown">
+          <a href="services2.html" class="dropbtn" aria-label="Voir les services">Prestations</a>
+          <div class="dropdown-content">
+            <a href="consultation.html#consultations">Consultations périnatales et parentales</a>
+            <a href="services2.html#accompagnement">Présence à l'accouchement</a>
+            <a href="services2.html#accouchement">Forfaits Accompagnement</a>
+            <a href="services2.html#accouchement">Ateliers Bébé signes</a>
+            <a href="services2.html#accouchement">Massage bébé (0 à 18 mois)</a>
+            <a href="services2.html#accouchement">Atelier portage physiologique</a>
+          </div>
+        </div>
+        <a href="/Tarifs/tarifs.html" aria-label="Voir les tarifs">Tarifs</a>
+        <a href="bon-cadeau.html" aria-label="Cadeau">Bon cadeau</a>
+        <a href="contact.html" aria-label="Contactez-nous">Contact</a>
+        <a href="https://www.instagram.com/nait.sens_/" target="_blank" rel="noopener noreferrer" aria-label="Suivez-nous sur Instagram">
+          <i class="fab fa-instagram social-icon"></i>
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="contact-hero">
+      <div class="container">
+        <h1>Contactez-moi</h1>
+        <p>Je suis là pour répondre à toutes vos questions et vous accompagner dans votre parcours de naissance naturelle.</p>
+      </div>
+    </section>
+
+    <section class="contact-section">
+      <div class="container">
+        <div class="contact-grid">
+          <div class="contact-form">
+            <h2>Envoyez-moi un message</h2>
+            <form id="contact-form" method="POST">
+              <input type="hidden" name="access_key" value="0247c8a9-b226-47d1-bba0-549de9602395" />
+              <div class="form-group">
+                <label for="Nom">Nom</label>
+                <input type="text" id="Nom" name="Nom" required />
+              </div>
+              <div class="form-group">
+                <label for="Prénom">Prénom</label>
+                <input type="text" id="Prénom" name="Prénom" required />
+              </div>
+              <div class="form-group">
+                <label for="Téléphone">Téléphone</label>
+                <input type="tel" id="Téléphone" name="Téléphone" required />
+              </div>
+              <div class="form-group">
+                <label for="email">Email :</label>
+                <input type="email" id="email" name="email" required />
+                <input type="hidden" name="subject" value="Contact depuis le site Naît Sens" />
+              </div>
+              <div class="form-group">
+                <label for="subject">Sujet</label>
+                <select id="subject" name="subject" required>
+                  <option value="">Choisissez un sujet</option>
+                  <option value="Prestation consultation prénatale">Consultation prénatale</option>
+                  <option value="Prestation accompagnement accouchement complet doula">Accompagnement à l'accouchement complet doula</option>
+                  <option value="Prestation accompagnement complet doula">Accompagnement complet Doula</option>
+                  <option value="Prestation accompagnement doula sans soins">Accompagnement Doula sans soins</option>
+                  <option value="Prestation présence à l'accouchement">Présence à l’accouchement</option>
+                  <option value="Prestation consultation post natale">Consultation post natale</option>
+                  <option value="Prestation bebe signe - individuel">Bébé signe - individuel</option>
+                  <option value="Prestation bebe signe - collectif">Bébé signe - collectif</option>
+                  <option value="Prestation bebe signe - forfait">Bébé signe - forfait 4 séances</option>
+                  <option value="Prestation portage bébé - individuel">Portage bébé - individuel</option>
+                  <option value="Prestation portage bébé - groupe">Portage bébé - groupe</option>
+                  <option value="Prestation massage bébé initiation - groupe">Massage bébé initiation - groupe</option>
+                  <option value="Prestation massage bébé forfait 4 séances - collectif">Massage bébé forfait 4 séances - collectif</option>
+                  <option value="Prestation massage bébé forfait 4 séances - individuel">Massage bébé forfait 4 séances - individuel</option>
+                  <option value="Prestation soin Re Naît Sens">Soin Re Naît Sens</option>
+                  <option value="Prestation soin Naít Sens d'une maman">Soin Naît Sens d'une maman</option>
+                  <option value="Prestation soin Naít Sens">Soin Naít Sens</option>
+                  <option value="Prestation gestes de secours - individuel">Gestes de secours - individuel</option>
+                  <option value="Prestation gestes de secours - groupe">Gestes de secours - groupe</option>
+                  <option value="Prestation Forfait bébé signe + Portage + Massage">Forfait bébé signe + Portage + Massage</option>
+                  <option value="autre">Autre</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" required></textarea>
+              </div>
+              <button type="submit" class="btn-submit" aria-label="Envoyer votre message">Envoyer</button>
+            </form>
+          </div>
+
+          <div class="contact-info">
+            <h2>Informations de contact</h2>
+            <p><i class="fas fa-map-marker-alt"></i> 123 Rue de la Naissance, 72000 Le Mans</p>
+            <p><i class="fas fa-phone"></i> +33 2 34 56 78 90</p>
+            <p><i class="fas fa-envelope"></i> contact@naîtsens.fr</p>
+            <p><i class="fas fa-clock"></i> Lundi - Vendredi: 9h00 - 18h00</p>
+            <div class="social-links">
+              <a href="https://www.instagram.com/nait.sens_/" aria-label="Suivez-nous sur Instagram"><i class="fab fa-instagram"></i></a>
+            </div>
+            <p class="home-sessions">Les séances se font à domicile.</p>
+            <div class="map-container">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d42730.339634924666!2d0.15441603143145935!3d47.981897153172646!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e288d0472879899%3A0x58d724ec3efdd7ab!2sCath%C3%A9drale%20Saint%20Julien-Le%20Mans!5e0!3m2!1sfr!2sfr!4v1731672729620!5m2!1sfr!2sfr" width="100%" height="400" frameborder="0" allowfullscreen allow="geolocation"></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-quote">"Accompagner quelqu'un ce n'est pas le précéder, lui indiquer la route, lui imposer un itinéraire, ni même connaître la direction qu'il va prendre. C'est marcher à ses côtés en le laissant libre de choisir son chemin et le rythme de son pas."</div>
+      <div class="footer-author">- Patrick Vespierre</div>
+      <div class="footer-separator"></div>
+      <div class="footer-links">
+        <a href="accueil.html">Accueil</a>
+        <a href="contact.html">Contact</a>
+        <a href="condition.html">Mentions légales</a>
+      </div>
+      <div class="footer-info">Accompagnement périnatal et parental à domicile</div>
+      <div class="footer-copyright">&copy; 2024 - Naît Sens</div>
+    </div>
+  </footer>
+
+  <div class="scroll-to-top" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">
+    <i class="fas fa-arrow-up"></i>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const header = document.querySelector("header");
+      const scrollThreshold = 50;
+
+      window.addEventListener("scroll", function () {
+        if (window.scrollY > scrollThreshold) {
+          header.classList.add("scrolled");
+        } else {
+          header.classList.remove("scrolled");
+        }
+      });
+
+      document.getElementById('contact-form').addEventListener('submit', function(event) {
+        event.preventDefault(); // Empêche la soumission par défaut
+        const form = event.target;
+        const formData = new FormData(form);
+
+        fetch('https://api.web3forms.com/submit', {
+          method: 'POST',
+          body: formData,
+          headers: {
+            'Accept': 'application/json'
+          }
+        })
+        .then(response => response.json())
+        .then(data => {
+          if (data.success) {
+            // Rediriger vers la page merci.html
+            window.location.href = "merci.html";
+          } else {
+            // Gérer les erreurs ici
+            console.error('Erreur lors de la soumission du formulaire:', data.message);
+          }
+        })
+        .catch(error => {
+          console.error('Erreur:', error);
+        });
+      });
+
+      const scrollToTopButton = document.querySelector(".scroll-to-top");
+      window.addEventListener("scroll", function () {
+        if (window.scrollY > 100) {
+          scrollToTopButton.style.display = "flex";
+        } else {
+          scrollToTopButton.style.display = "none";
+        }
+      });
+    });
+  </script>
+</body>
+</html>

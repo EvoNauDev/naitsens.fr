@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <!-- Déclaration du type de document HTML et de la langue (français) -->
+
+  <head>
+    <!-- Métadonnées pour les moteurs de recherche et les navigateurs -->
+    <meta charset="UTF-8" />
+    <!-- Définit la mise en page adaptée pour tous les appareils (responsive) -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Naît Sens - Mentions Légales</title>
+    <!-- Titre de la page qui s'affiche dans l'onglet du navigateur -->
+
+    <!-- Importation de Font Awesome pour les icônes -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+
+    <link rel="icon" type="image/png" href="./Images/Naît Sens.png">
+    
+    <!-- Importation des polices Google : Playfair Display et Roboto -->
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;700&display=swap");
+
+      /* Variables CSS pour réutiliser les couleurs dans tout le document */
+      :root {
+        --primary-color: #f5e5e8;
+        --secondary-color: #e6d0d4;
+        --accent-color: #d4a5af;
+        --text-color: #4a4a4a;
+        --background-color: #faf7f7;
+        --footer-bg-color: #f1d0b5; /* Couleur de fond du footer */
+        --footer-text-color: #4a4a4a; /* Couleur du texte du footer */
+        --footer-separator-color: #d4a5af; /* Couleur de la ligne de séparation */
+        --scroll-top-bg-color: #d4a5af; /* Couleur du bouton "scroll to top" */
+      }
+
+      /* Définition des règles de base pour tous les éléments */
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      /* Style global du document */
+      body,
+      html {
+        font-family: "Roboto", sans-serif;
+        color: var(--text-color);
+        line-height: 1.8;
+        background-color: var(--background-color);
+        scroll-behavior: smooth; /* Transition douce lors du scroll */
+      }
+
+      /* Style du conteneur général qui limite la largeur maximale et centre le contenu */
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+
+      /* Style du header (entête) qui reste fixe au défilement */
+      header {
+        background: var(--primary-color);
+        padding: 10px 0;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        position: fixed;
+        width: 100%;
+        z-index: 1000;
+        transition: all 0.4s ease; /* Transition douce sur les changements de style */
+      }
+
+      /* Style appliqué au header quand on scrolle vers le bas */
+      header.scrolled {
+        padding: 5px 0;
+        background: rgba(245, 229, 232, 0.9);
+        backdrop-filter: blur(10px); /* Effet de flou sur l'arrière-plan */
+      }
+
+      /* Style de la barre de navigation */
+      nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      /* Conteneur du logo */
+      .logo-container {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+      }
+
+      /* Style de l'image du logo */
+      .logo-image {
+        width: 60px;
+        height: 60px;
+        margin-right: 10px;
+      }
+
+      /* Style du logo du site */
+      .logo {
+        font-family: "Playfair Display", serif;
+        font-size: 2rem;
+        font-weight: 700;
+        color: var(--text-color);
+        text-decoration: none;
+        transition: all 0.3s ease;
+      }
+
+      /* Changement de couleur du logo au survol */
+      .logo:hover {
+        color: var(--accent-color);
+      }
+
+      /* Liens de navigation */
+      .nav-links {
+        display: flex;
+        gap: 20px; /* Espace entre les liens */
+        align-items: center;
+      }
+
+      /* Style des liens de navigation */
+      .nav-links a {
+        color: var(--text-color);
+        text-decoration: none;
+        font-weight: 500;
+        font-size: 0.9rem;
+        transition: all 0.3s ease;
+        position: relative;
+      }
+
+      /* Soulignement animé sous les liens lors du survol */
+      .nav-links a::after {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 2px;
+        bottom: -3px;
+        left: 0;
+        background-color: var(--accent-color);
+        transition: width 0.3s ease;
+      }
+
+      /* Étend le soulignement au survol */
+      .nav-links a:hover::after {
+        width: 100%;
+      }
+
+      /* Icônes des réseaux sociaux */
+      .social-icon {
+        font-size: 1.5rem;
+        color: var(--text-color);
+        transition: all 0.3s ease;
+        vertical-align: middle;
+      }
+
+      /* Changement de couleur des icônes sociales au survol */
+      .social-icon:hover {
+        color: var(--accent-color);
+      }
+
+      /* Style du footer (pied de page) */
+      footer {
+        background: var(--footer-bg-color);
+        color: var(--footer-text-color);
+        text-align: center;
+        padding: 20px 0;
+        position: relative;
+      }
+
+      /* Ligne de séparation au-dessus des informations dans le footer */
+      .footer-separator {
+        height: 1px;
+        background-color: var(--footer-separator-color);
+        margin: 20px 0;
+      }
+
+      /* Citation présente dans le footer */
+      .footer-quote {
+        font-family: "Playfair Display", serif;
+        font-size: 1.4rem;
+        font-style: italic;
+        max-width: 600px;
+        margin: 0 auto;
+        line-height: 1.6;
+        color: var(--footer-text-color);
+      }
+
+      /* Auteur de la citation */
+      .footer-author {
+        font-size: 1rem;
+        margin-top: 15px;
+        font-weight: 700;
+        color: var(--footer-text-color);
+      }
+
+      /* Liens du footer */
+      .footer-links {
+        margin-top: 20px;
+      }
+
+      /* Style des liens dans le footer */
+      .footer-links a {
+        color: var(--footer-text-color);
+        text-decoration: none;
+        margin: 0 15px;
+        font-weight: 500;
+        transition: color 0.3s ease;
+      }
+
+      /* Changement de couleur des liens dans le footer au survol */
+      .footer-links a:hover {
+        color: var(--accent-color);
+      }
+
+      /* Texte du copyright dans le footer */
+      .footer-copyright {
+        margin-top: 15px;
+        font-size: 0.9rem;
+        color: var(--footer-text-color);
+      }
+
+      /* Texte supplémentaire dans le footer */
+      .footer-info {
+        margin-top: 10px;
+        font-size: 0.9rem;
+        color: var(--footer-text-color);
+        font-weight: 500;
+      }
+
+      /* Style spécifique pour la section Mentions Légales */
+      .mentions-legales {
+        padding: 100px 0;
+        background: var(--background-color);
+      }
+
+      /* Titre de la section Mentions Légales */
+      .mentions-legales h1 {
+        font-family: "Playfair Display", serif;
+        font-size: 3rem;
+        color: var(--accent-color);
+        text-align: center;
+        margin-bottom: 50px;
+      }
+
+      /* Sous-titres des sections des mentions légales */
+      .mentions-legales h2 {
+        font-family: "Playfair Display", serif;
+        font-size: 2rem;
+        color: var(--text-color);
+        margin-top: 40px;
+        margin-bottom: 20px;
+      }
+
+      /* Texte des sections de mentions légales */
+      .mentions-legales p {
+        font-size: 1.1rem;
+        line-height: 1.8;
+        margin-bottom: 20px;
+        color: var(--text-color);
+      }
+
+      /* Style des liens dans les mentions légales */
+      .mentions-legales a {
+        color: var(--accent-color);
+        text-decoration: underline;
+      }
+
+      /* Suppression du soulignement des liens au survol */
+      .mentions-legales a:hover {
+        color: var(--text-color);
+        text-decoration: none;
+      }
+
+      /* Styles responsifs pour les petits écrans */
+      @media (max-width: 768px) {
+        .nav-links {
+          display: none; /* Cache les liens de navigation sur les petits écrans */
+        }
+
+        /* Ajustement de la taille du texte du footer pour les petits écrans */
+        .footer-quote {
+          font-size: 1.2rem;
+        }
+
+        /* Ajustement de la taille du titre des mentions légales pour les petits écrans */
+        .mentions-legales h1 {
+          font-size: 2.5rem;
+        }
+      }
+
+      /* Animation de type fade-in avec un effet de montée */
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      /* Classe pour ajouter l'animation fadeInUp aux éléments */
+      .animate-fadeInUp {
+        animation: fadeInUp 0.6s ease-out forwards;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <!-- Barre de navigation avec le logo et les liens -->
+      <nav class="container">
+        <!-- Logo avec une image et un texte -->
+        <a href="accueil.html" class="logo-container">
+          <img
+            src="./Images/Naitnait.png"
+            alt="Logo de Naît Sens représentant une mère avec son enfant"
+            class="logo-image"
+          />
+          <span class="logo">Naît Sens</span>
+        </a>
+
+        <!-- Liens de navigation -->
+        <div class="nav-links">
+          <a href="accueil.html" aria-label="Retour à l'accueil">Accueil</a>
+          <a href="a-propos.html" aria-label="En savoir plus sur Naît Sens">Présentation</a>
+          <a href="services.html" aria-label="Voir les services">Prestations</a>
+          <a href="bon-cadeau.html" aria-label="Cadeau">Bon cadeau</a>
+          <a href="contact.html" aria-label="Contactez-nous">Contact</a>
+          <!-- Lien vers Instagram avec icône Font Awesome -->
+          <a
+            href="https://www.instagram.com/nait.sens_/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Suivez-nous sur Instagram"
+          >
+            <i class="fab fa-instagram social-icon"></i>
+          </a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Section Mentions Légales -->
+      <section class="mentions-legales" id="mentions">
+        <div class="container">
+          <h1 class="animate-fadeInUp">Mentions Légales</h1>
+
+          <!-- Informations sur l'éditeur du site -->
+          <h2 class="animate-fadeInUp">1. Éditeur du Site</h2>
+          <p class="animate-fadeInUp">
+            Le présent site est édité par <strong>Naît Sens</strong>, entreprise individuelle
+            immatriculée sous le numéro SIRET XXXXXXXX, dont le siège social est situé à
+            [Votre adresse].
+          </p>
+
+          <!-- Responsable de la publication -->
+          <h2 class="animate-fadeInUp">2. Responsable de la Publication</h2>
+          <p class="animate-fadeInUp">
+            La responsable de la publication est Madame [Votre Nom], en qualité de fondatrice
+            de Naît Sens.
+          </p>
+
+          <!-- Hébergeur du site -->
+          <h2 class="animate-fadeInUp">3. Hébergement</h2>
+          <p class="animate-fadeInUp">
+            Le site est hébergé par [Nom de l'hébergeur], situé au [Adresse de l'hébergeur].
+            Téléphone : [Numéro de téléphone de l'hébergeur].
+          </p>
+
+          <!-- Propriété intellectuelle -->
+          <h2 class="animate-fadeInUp">4. Propriété Intellectuelle</h2>
+          <p class="animate-fadeInUp">
+            L'ensemble des éléments du site (textes, images, graphismes, logos, icônes, etc.)
+            sont la propriété exclusive de Naît Sens, sauf mention contraire. Toute
+            reproduction, distribution, modification, adaptation, retransmission ou
+            publication, même partielle, de ces différents éléments est strictement
+            interdite sans l'accord exprès par écrit de Naît Sens.
+          </p>
+
+          <!-- Ajoutez les autres sections des mentions légales ici -->
+
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        <p class="footer-quote">
+          "Chaque naissance est une histoire unique, et chaque parent mérite un
+          accompagnement sur mesure pour écrire la sienne."
+        </p>
+        <p class="footer-author">- Naît Sens</p>
+
+        <!-- Ligne de séparation -->
+        <div class="footer-separator"></div>
+
+        <!-- Liens dans le footer -->
+        <div class="footer-links">
+          <a href="accueil.html">Accueil</a>
+          <a href="contact.html">Contact</a>
+          <a href="condition.html">Mentions légales</a>
+        </div>
+
+        <!-- Texte de copyright -->
+        <div class="footer-copyright">
+          &copy; 2024 - Naît Sens
+        </div>
+
+        <!-- Texte supplémentaire -->
+        <div class="footer-info">
+          Accompagnement périnatal et parental à domicile
+        </div>
+      </div>
+    </footer>
+
+        <!-- Bouton scroll-to-top -->
+        <div class="scroll-to-top" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">
+          <i class="fas fa-arrow-up"></i>
+        </div>
+    
+    <!-- Script JavaScript pour gérer l'animation et le comportement du header et du scroll -->
+    <script>
+      document.addEventListener("DOMContentLoaded", (event) => {
+        const header = document.querySelector("header");
+
+        // Ajoute ou enlève la classe 'scrolled' au header en fonction du scroll
+        window.addEventListener("scroll", () => {
+          if (window.scrollY > 50) {
+            header.classList.add("scrolled");
+          } else {
+            header.classList.remove("scrolled");
+          }
+        });
+
+        // Intersection Observer pour les animations
+        const animatedElements = document.querySelectorAll(".animate-fadeInUp");
+
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("show");
+              }
+            });
+          },
+          {
+            threshold: 0.1, // Se déclenche lorsque 10% de l'élément est visible
+          }
+        );
+
+        animatedElements.forEach((element) => {
+          observer.observe(element);
+        });
+      });
+    </script>
+  </body>
+</html>

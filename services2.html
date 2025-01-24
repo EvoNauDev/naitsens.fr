@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    name="description"
+    content="Naît Sens offre des services périnataux et parentaux personnalisés pour accompagner votre parcours de parentalité avec bienveillance, expertise et amour."
+  />
+  <meta name="keywords" content="accompagnement périnatal, parentalité, naissance, bien-être, Naît Sens" />
+  <meta name="author" content="Naît Sens" />
+  <title>Naît Sens - Services Périnataux et Parentaux Personnalisés</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;700&display=swap"
+    rel="stylesheet"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+  />
+  <link rel="icon" type="image/png" href="./Images/Naît Sens.png">
+
+  <style>
+    :root {
+      --primary-color: #f5e5e8;
+      --secondary-color: #e6d0d4;
+      --accent-color: #d4a5af;
+      --text-color: #4a4a4a;
+      --background-color: #faf7f7;
+      --footer-bg-color: #f1d0b5;
+      --footer-text-color: #4a4a4a;
+      --footer-separator-color: #d4a5af;
+      --scroll-top-bg-color: #d4a5af;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body,
+    html {
+      font-family: "Roboto", sans-serif;
+      color: var(--text-color);
+      line-height: 1.8;
+      background-color: var(--background-color);
+      scroll-behavior: smooth;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    header {
+      background: var(--primary-color);
+      padding: 10px 0;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      position: fixed;
+      width: 100%;
+      z-index: 1000;
+      transition: all 0.4s ease;
+    }
+
+    header.scrolled {
+      padding: 5px 0;
+      background: rgba(245, 229, 232, 0.9);
+      backdrop-filter: blur(10px);
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo-container {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+    }
+
+    .logo-image {
+      width: 60px;
+      height: 60px;
+      margin-right: 10px;
+    }
+
+    .logo {
+      font-family: "Playfair Display", serif;
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--text-color);
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .logo:hover {
+      color: var(--accent-color);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+    }
+
+    .nav-links a {
+      color: var(--text-color);
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 0.9rem;
+      transition: all 0.3s ease;
+      position: relative;
+    }
+
+    .nav-links a::after {
+      content: "";
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: -3px;
+      left: 0;
+      background-color: var(--accent-color);
+      transition: width 0.3s ease;
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    .social-icon {
+      font-size: 1.5rem;
+      color: var(--text-color);
+      transition: all 0.3s ease;
+      vertical-align: middle;
+    }
+
+    .social-icon:hover {
+      color: var(--accent-color);
+    }
+
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: var(--primary-color);
+      min-width: 200px;
+      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+      z-index: 1;
+      top: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      padding: 8px 0;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .dropdown-content a {
+      color: var(--text-color);
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      text-align: center;
+      transition: background-color 0.3s ease;
+    }
+
+    .dropdown-content a:hover {
+      background-color: var(--secondary-color);
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+      opacity: 1;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(-10px) translateX(-50%);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0) translateX(-50%);
+      }
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+      animation: fadeIn 0.3s ease forwards;
+    }
+
+    /* Section hero des tarifs */
+    .services-hero {
+      background-color: var(--footer-bg-color);
+      min-height: 30vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 20px 20px;
+      padding-top: 80px;
+    }
+
+    .services-hero h1 {
+      font-family: "Playfair Display", serif;
+      font-size: 4rem;
+      color: var(--text-color);
+      animation: fadeInUp 1s ease-out;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .services-section {
+      padding: 80px 20px;
+    }
+
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 30px;
+    }
+
+    .service-card {
+      position: relative;
+      overflow: hidden;
+      border-radius: 15px;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      background: #fff;
+    }
+
+    .service-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.3s ease;
+    }
+
+    .service-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+    }
+
+    .service-card:hover img {
+      transform: scale(1.1);
+    }
+
+    .service-content {
+      padding: 20px;
+      text-align: center;
+    }
+
+    .service-content h3 {
+      font-family: "Playfair Display", serif;
+      font-size: 1.5rem;
+      color: var(--accent-color);
+      margin: 0;
+    }
+
+    .service-card a {
+      text-decoration: none;
+      color: inherit;
+      display: block;
+      height: 100%;
+    }
+
+    /* Bouton "Voir les tarifs" */
+    .view-tarifs-button {
+      display: block;
+      margin: 40px auto;
+      padding: 15px 40px;
+      background-color: var(--accent-color);
+      color: white;
+      text-align: center;
+      text-decoration: none;
+      border-radius: 30px;
+      font-weight: bold;
+      font-size: 1.2rem;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+      width: fit-content;
+    }
+
+    .view-tarifs-button:hover {
+      background-color: #b98490;
+      transform: translateY(-3px);
+    }
+
+    .legal-info {
+      margin-top: 40px;
+      text-align: center;
+      font-size: 1rem;
+      line-height: 1.6;
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 20px;
+      background: rgba(255, 255, 255, 0.9);
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    footer {
+      background: var(--footer-bg-color);
+      color: var(--footer-text-color);
+      text-align: center;
+      padding: 40px 20px;
+      position: relative;
+    }
+
+    .footer-separator {
+      height: 1px;
+      background-color: var(--footer-separator-color);
+      margin: 30px auto;
+      width: 80%;
+    }
+
+    .footer-quote {
+      font-family: "Playfair Display", serif;
+      font-size: 1.5rem;
+      font-style: italic;
+      max-width: 800px;
+      margin: 0 auto;
+      line-height: 1.6;
+      color: var(--footer-text-color);
+    }
+
+    .footer-author {
+      font-size: 1rem;
+      margin-top: 20px;
+      font-weight: 700;
+      color: var(--footer-text-color);
+    }
+
+    .footer-links {
+      margin-top: 30px;
+    }
+
+    .footer-links a {
+      color: var(--footer-text-color);
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    .footer-links a:hover {
+      color: var(--accent-color);
+    }
+
+    .footer-info {
+      margin-top: 20px;
+      font-size: 0.9rem;
+      color: var(--footer-text-color);
+      font-weight: 500;
+    }
+
+    .footer-copyright {
+      margin-top: 10px;
+      font-size: 0.9rem;
+      color: var(--footer-text-color);
+    }
+
+    .scroll-to-top {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background-color: var(--scroll-top-bg-color);
+      color: white;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 24px;
+      cursor: pointer;
+      transition: background-color 0.3s ease, opacity 0.3s ease, transform 0.3s ease;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(100px);
+      border: none;
+      outline: none;
+      z-index: 1000;
+    }
+
+    .scroll-to-top.show {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+
+    .scroll-to-top:hover {
+      background-color: #b98490;
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+      }
+
+      .services-hero h1 {
+        font-size: 2.5rem;
+      }
+
+      .footer-quote {
+        font-size: 1.2rem;
+      }
+
+      .footer-links a {
+        display: block;
+        margin: 10px 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-5QBB823G');</script>
+  <!-- End Google Tag Manager -->
+
+  <header>
+    <nav class="container">
+      <a href="accueil.html" class="logo-container" aria-label="Retour à l'accueil">
+        <img
+          src="./Images/Naitnait.png"
+          alt="Logo de Naît Sens représentant l'accompagnement périnatal"
+          class="logo-image"
+          loading="lazy"
+        />
+        <span class="logo">Naît Sens</span>
+      </a>
+
+      <div class="nav-links">
+        <a href="accueil.html" aria-label="Retour à l'accueil">Accueil</a>
+        <a href="a-propos.html" aria-label="En savoir plus sur Naît Sens">Présentation</a>
+        <div class="dropdown">
+          <a href="services2.html" class="dropbtn" aria-label="Voir les services">Prestations</a>
+          <div class="dropdown-content">
+            <a href="consultation.html#consultations">Consultations périnatales et parentales</a>
+            <a href="presence.html#accompagnement">Présence à l'accouchement</a>
+            <a href="forfaits.html#accouchement">Forfaits Accompagnement</a>
+            <a href="ateliersbebe.html#accouchement">Ateliers Bébé signes</a>
+            <a href="massage.html#accouchement">Massage bébé (0 à 18 mois)</a>
+            <a href="atelierportage.html#accouchement">Atelier portage physiologique</a>
+          </div>
+        </div>
+        <a href="/Tarifs/tarifs.html" aria-label="Voir les tarifs">Tarifs</a>
+        <a href="bon-cadeau.html" aria-label="Cadeau">Bon cadeau</a>
+        <a href="contact.html" aria-label="Contactez-nous">Contact</a>
+        <a
+          href="https://www.instagram.com/nait.sens_/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Suivez-nous sur Instagram"
+        >
+          <i class="fab fa-instagram social-icon"></i>
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="services-hero" id="services">
+      <div class="container">
+        <h1>Mes Prestations</h1>
+      </div>
+    </section>
+
+    <section class="services-section">
+      <div class="container">
+        <div class="service-grid">
+          <div class="service-card">
+            <a href="consultation.html">
+              <img
+                src="Images/Photo des consultations.png"
+                alt="Atelier Massage Bébé"
+                loading="lazy"
+              />
+              <div class="service-content">
+                <h3>Consultations périnatales et parentales</h3>
+              </div>
+            </a>
+          </div>
+          <div class="service-card">
+            <a href="consultation.html">
+              <img
+                src="/Images/Photo présence à l'accouchement.png"
+                alt="Atelier Portage Physiologique"
+                loading="lazy"
+              />
+              <div class="service-content">
+                <h3>Présence à l'accouchement</h3>
+              </div>
+            </a>
+          </div>
+
+          <div class="service-card">
+            <a href="forfaits.html">
+              <img
+                src="Images/Photo forfait accompagnement.png"
+                alt="Massage Femme Enceinte"
+                loading="lazy"
+              />
+              <div class="service-content">
+                <h3>Forfaits accompagnements</h3>
+              </div>
+            </a>
+          </div>
+
+          <div class="service-card">
+            <a href="massage-femme-enceinte.html">
+              <img
+                src="/Images/Photo bébé signe.png"
+                alt="Massage Femme Enceinte"
+                loading="lazy"
+              />
+              <div class="service-content">
+                <h3>Atelier Bébé signes</h3>
+              </div>
+            </a>
+          </div>
+
+          <div class="service-card">
+            <a href="massage-femme-enceinte.html">
+              <img
+                src="Images/Photo massage bébé.png"
+                alt="Massage Femme Enceinte"
+                loading="lazy"
+              />
+              <div class="service-content">
+                <h3>Massage bébé (0 à 18 mois)</h3>
+              </div>
+            </a>
+          </div>
+
+          <div class="service-card">
+            <a href="massage-femme-enceinte.html">
+              <img
+                src="Images/Photo portage physio.png"
+                alt="Massage Femme Enceinte"
+                loading="lazy"
+              />
+              <div class="service-content">
+                <h3>Atelier Portage physiologique</h3>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <!-- Bouton "Voir les tarifs" -->
+        <a href="/Tarifs/tarifs.html" class="view-tarifs-button">Voir les tarifs</a>
+
+        <!-- Texte légal -->
+        <div class="legal-info">
+          <p>
+            Je suis complémentaire aux rendez-vous médicaux avec votre sage-femme et/ou gynécologue obstétricien et je n'effectue aucun acte médical. Donc, je n'accompagne aucune grossesse qui n'a pas de suivi médical par une sage-femme ou un gynécologue obstétricien.
+          </p>
+          <br />
+          <p>
+            Je ne peux et ne serai jamais présente à un accouchement sans la présence d'une sage-femme ou d'un gynécologue obstétricien (accouchement à domicile par exemple).
+          </p>
+          <br>
+          <p>
+            - Article L4151-1 du Code de la Santé détermine le métier de la sage-femme, avec la préparation psychoprophylactique à la naissance (Méthode Lamaze basée sur le conditionnement de Pavlov), la surveillance de la grossesse et la surveillance et à la pratique de l'accouchement et des soins postnataux (mère et enfant), la contraception, le suivi gynécologique de prévention (sauf cas de situation pathologique, référencement auprès d'un médecin).
+          </p>
+          <br>
+          <p>
+            Article L4161-3 et 4 du Code de la Santé parle de l'exercice illégal du métier de sage-femme (voir Article L4151-1) et exercice illégal de la médecine. L'exercice illégal de la médecine répond à une logique de répétition : on parle d'infraction d'habitude. Elle peut notamment consister :
+          </p>
+          <br>
+
+            <li>Au suivi à caractère médical régulier et habituel d'une seule personne,</li>
+            <li>À l'accomplissement d'un même acte interdit sur plusieurs personnes différentes.</li>
+
+          <br>
+
+          <p>
+            L'habitude peut être reconnue dès la première répétition d'un acte illégal : une chance est accordée mais dès le deuxième écart l'exercice illégal de la médecine peut être prononcé. Exemple d'acte assimilé à l'exercice de la profession de sage-femme : surveillance et pratique de l'accouchement. (2 ans d'emprisonnement et de 30.000 euros d'amende).
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-quote">
+        "Accompagner quelqu'un ce n'est pas le précéder, lui indiquer la route, lui imposer un itinéraire, ni même connaître la direction qu'il va prendre. C'est marcher à ses côtés en le laissant libre de choisir son chemin et le rythme de son pas."
+      </div>
+      <div class="footer-author">- Patrick Vespierre</div>
+
+      <div class="footer-separator"></div>
+
+      <div class="footer-links">
+        <a href="accueil.html">Accueil</a>
+        <a href="contact.html">Contact</a>
+        <a href="condition.html">Mentions légales</a>
+      </div>
+
+      <div class="footer-info">
+        Accompagnement périnatal et parental à domicile
+      </div>
+
+      <div class="footer-copyright">&copy; 2024 - Naît Sens</div>
+    </div>
+  </footer>
+
+  <div
+    class="scroll-to-top"
+    aria-label="Revenir en haut"
+    onclick="window.scrollTo({ top: 0, behavior: 'smooth' });"
+  >
+    <i class="fas fa-arrow-up"></i>
+  </div>
+
+  <script>
+    window.addEventListener("scroll", function () {
+      const header = document.querySelector("header");
+      header.classList.toggle("scrolled", window.scrollY > 50);
+
+      const scrollToTop = document.querySelector(".scroll-to-top");
+      if (window.scrollY > 300) {
+        scrollToTop.classList.add("show");
+      } else {
+        scrollToTop.classList.remove("show");
+      }
+    });
+  </script>
+</body>
+</html>
